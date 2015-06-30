@@ -1,0 +1,25 @@
+body {
+	color: white;
+}
+
+#top {
+	background-color: lightgrey;
+	padding: 10em;
+
+}
+
+#bottom {
+	background-color: black;
+	padding: 2em 10em 10em 10em;
+}
+
+#button {
+	background-color: green;
+	color: white;
+	clear: both;
+	border-radius: 10px;
+}
+
+#email-error, #password-error {
+	color: pink;
+}
