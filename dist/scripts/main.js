@@ -1,28 +1,25 @@
 $(document).on("ready", function() {
 
+function login(e) {
 
+	var email = $("#username").val();
+	var password = $("#password").val();
 
-$("#button").on("click", login);
-
-var email = $("#email").val();
-var password = $("#password").val();
-
-	function login(e) {
-		e.preventDefault();
+	e.preventDefault();
 
 	if (email ==="aaron@theironyard.com" && password === "password123") {
-		console.log("success?");
 		window.location.replace = ("http://www.theironyard.com");
 	}
 
 	if (email ==="admin@google.com" && password === "pandas") {
-		window.location.href = ("http://www.theironyard.com");
+		window.location.replace = ("http://www.theironyard.com");
 	}
 
 	if (email =="butts@butts.com" && password === "honeycrisp") {
-		window.location.href = ("http://www.theironyard.com");
+		window.location.replace = ("http://www.theironyard.com");
 	}
 
+//errors
 	if (email.indexOf("@")=== -1) {
 		$("#email-error").html("enter an email address!");
 	}
@@ -42,6 +39,10 @@ var password = $("#password").val();
 	if(email === "admin@google.com" && password !== "pandas"){
 			$("#password-error").html("email does not match password.");
 		}
+	e.preventDefault();
 
 	}
+
+	$("#button").on("click", login);
+  
 });
